@@ -1,0 +1,27 @@
+﻿@model TemplatedHtmlHelper.Models.Employee
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<div>
+    @Html.DisplayName("Id") - @Html.Editor("Id")
+    <br />
+    <br />
+    @Html.DisplayNameFor(x => x.Name) - @Html.EditorFor(x => x.Name)
+    <br />
+    <br />
+    @Html.DisplayNameFor(x => x.DateOfBirth) - @Html.EditorFor(x => x.DateOfBirth)
+    <br />
+    <br />
+    @Html.DisplayNameFor(x => x.BirthTime) - @Html.EditorFor(x => x.BirthTime)
+    <br />
+    <br />
+    @using (Html.BeginForm("MyForm")) {
+        @Html.EditorForModel()
+        <br />
+        <input type="submit" value="Press me" />
+    }
+</div>
+
