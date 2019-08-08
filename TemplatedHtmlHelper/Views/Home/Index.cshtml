@@ -1,0 +1,21 @@
+﻿@model TemplatedHtmlHelper.Models.Employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div>
+    @Html.DisplayName("Name")
+    <br />
+    <br />
+    @Html.DisplayNameFor(x => x.DateOfBirth)
+    <br />
+    <br />
+    <hr />
+    @Html.DisplayText("Name")
+    <br />
+    <br />
+    @Html.DisplayFor(x => x.DateOfBirth)
+</div>
+
